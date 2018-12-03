@@ -11,8 +11,8 @@ public class TabPaneDemo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        TabPane tabPane = new TabPane();
-		TabPane test = new TabPane();
+        TabPane tabPane = new TabPane();     //First Level tab
+		TabPane test = new TabPane();		// Nested Tab
 		test.getTabs().addAll(new Tab("Really Something!!!"));
         Tab tab1 = new Tab("Button");
         tab1.setContent(new StackPane(new Button("Button")));
