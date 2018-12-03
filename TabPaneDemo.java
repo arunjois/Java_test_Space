@@ -13,7 +13,7 @@ public class TabPaneDemo extends Application {
     public void start(Stage primaryStage) throws Exception {
         TabPane tabPane = new TabPane();
 		TabPane test = new TabPane();
-		test.getTabs().addAll(new Tab());
+		test.getTabs().addAll(new Tab("Really Something!!!"));
         Tab tab1 = new Tab("Button");
         tab1.setContent(new StackPane(new Button("Button")));
 
