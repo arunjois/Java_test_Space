@@ -68,6 +68,7 @@ public final class FileChooserSample extends Application {
                     if (file != null) {
                         openFile(file);
                     }
+					System.out.println(file.getName());
                 });
  
         openMultipleButton.setOnAction(
