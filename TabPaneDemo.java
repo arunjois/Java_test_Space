@@ -9,32 +9,32 @@ import javafx.stage.Stage;
 
 public class TabPaneDemo extends Application {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        TabPane tabPane = new TabPane();     //First Level tab
-		TabPane test = new TabPane();		// Nested Tab
-		test.getTabs().addAll(new Tab("Really Something!!!"));
-        Tab tab1 = new Tab("Button");
-        tab1.setContent(new StackPane(new Button("Button")));
+  @Override
+  public void start(Stage primaryStage) throws Exception {
+    TabPane tabPane = new TabPane();     //First Level tab
+    TabPane test = new TabPane();		// Nested Tab
+    test.getTabs().addAll(new Tab("Really Something!!!"));
+    Tab tab1 = new Tab("Button");
+    tab1.setContent(new StackPane(new Button("Button")));
 
-        Tab tab2 = new Tab("CheckBox");
-        tab2.setContent(test);
+    Tab tab2 = new Tab("CheckBox");
+    tab2.setContent(test);
 
-        tabPane.getTabs().addAll(tab1, tab2);
+    tabPane.getTabs().addAll(tab1, tab2);
 
-        StackPane myPane = new StackPane();
-        myPane.getChildren().add(tabPane);
-        Scene myScene = new Scene(myPane);
+    StackPane myPane = new StackPane();
+    myPane.getChildren().add(tabPane);
+    Scene myScene = new Scene(myPane);
 
-        primaryStage.setScene(myScene);
-        primaryStage.setTitle("App");
-        primaryStage.setWidth(300);
-        primaryStage.setHeight(200);
-        primaryStage.show();
-    }
+    primaryStage.setScene(myScene);
+    primaryStage.setTitle("App");
+    primaryStage.setWidth(300);
+    primaryStage.setHeight(200);
+    primaryStage.show();
+  }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+  public static void main(String[] args) {
+    launch(args);
+  }
 
 }
