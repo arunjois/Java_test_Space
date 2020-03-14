@@ -7,56 +7,56 @@ import javafx.stage.Stage;
 
 public class CounterApp extends Application {
 
-    private int count = 0;
-    private final Text text = new Text(Integer.toString(count));
+	private int count = 0;
+	private final Text text = new Text(Integer.toString(count));
 
-    private void incrementCount() {
-        count++;
-        text.setText(Integer.toString(count));
-    }
+	private void incrementCount() {
+		count++;
+		text.setText(Integer.toString(count));
+	}
 
-    @Override
-    public void start(Stage primaryStage) {
-        StackPane root = new StackPane();
-        root.getChildren().add(text);
+	@Override
+	public void start(Stage primaryStage) {
+		StackPane root = new StackPane();
+		root.getChildren().add(text);
 
-        Scene scene = new Scene(root, 200, 200);
+		Scene scene = new Scene(root, 200, 200);
 
-        // longrunning operation runs on different thread
-        Thread thread = new Thread(new Runnable() {
+		// longrunning operation runs on different thread
+		Thread thread = new Thread(new Runnable() {
 
-            @Override
-            public void run() {
-                Runnable updater = new Runnable() {
+			@Override
+			public void run() {
+				Runnable updater = new Runnable() {
 
-                    @Override
-                    public void run() {
-                        incrementCount();
-                    }
-                };
+					@Override
+					public void run() {
+						incrementCount();
+					}
+				};
 
-                while (true) {
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException ex) {
-                    }
+				while (true) {
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException ex) {
+					}
 
-                    // UI update is run on the Application thread
-                    Platform.runLater(updater);
-                }
-            }
+					// UI update is run on the Application thread
+					Platform.runLater(updater);
+				}
+			}
 
-        });
-        // don't let thread prevent JVM shutdown
-        thread.setDaemon(true);
-        thread.start();
+		});
+		// don't let thread prevent JVM shutdown
+		thread.setDaemon(true);
+		thread.start();
 
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+	public static void main(String[] args) {
+		launch(args);
+	}
 
 }
