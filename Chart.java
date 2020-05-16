@@ -38,6 +38,7 @@ public class Chart extends Application {
 		gc.strokeRect(10,10,780,470);     //Rectangle Box
 		gc.strokeLine(10,115,790,115);    //Line Stroke
 		gc.strokeLine(10,370,790,370);
+		gc.strokeText("Sat",20,60);
 		gc.strokeLine(10,235,150,235);    //Horizontal Left lines
 		gc.strokeLine(650,235,790,235);   //Horizontal Right lines
 		gc.strokeLine(385,10,385,115);    //Vertical Top Line
