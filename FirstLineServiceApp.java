@@ -56,7 +56,7 @@ public class FirstLineServiceApp extends Application {
 					throws IOException, MalformedURLException {
 					try ( BufferedReader in = new BufferedReader(
 								new InputStreamReader(
-									new URL(getUrl()).openStream())
+									new URL(getUrl()).openStream());
 									in = new BufferedReader(
 										new InputStreamReader(u.openStream()))) {
 									return in.readLine();

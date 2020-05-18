@@ -5,6 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.geometry.*;
+import javafx.scene.paint.Color;
 import javafx.scene.control.*;
 public class Chart extends Application {
 	public static void main(String args[]) {
@@ -16,6 +17,7 @@ public class Chart extends Application {
 		Canvas canvas = new Canvas();
 		canvas.setWidth(800);
 		canvas.setHeight(500);
+		Color c = Color.BLUE;
 
 		// Get the graphics context of the canvas
 		GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -35,10 +37,13 @@ public class Chart extends Application {
 		  */	
 		// Add the Canvas to the Pane
 
+		gc.setFill(c);
+		gc.setStroke(Color.BLUE);
 		gc.strokeRect(10,10,780,470);     //Rectangle Box
 		gc.strokeLine(10,115,790,115);    //Line Stroke
 		gc.strokeLine(10,370,790,370);
-		gc.strokeText("Sat",20,60);
+		//gc.strokeText("Sat",20,60);
+		gc.strokeText("ಶನಿ",20,60);
 		gc.strokeLine(10,235,150,235);    //Horizontal Left lines
 		gc.strokeLine(650,235,790,235);   //Horizontal Right lines
 		gc.strokeLine(385,10,385,115);    //Vertical Top Line
@@ -46,7 +51,7 @@ public class Chart extends Application {
 		gc.strokeLine(150,10,150,480);
 		gc.strokeLine(650,10,650,480);     //Vertical Line Long
 		final Label title = new Label("Some text");
-		//title.setMaxWidth(Double.MAX_VALUE);
+		title.setMaxWidth(Double.MAX_VALUE);
 		title.setAlignment(Pos.CENTER);
 
 
