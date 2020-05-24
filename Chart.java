@@ -3,6 +3,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.geometry.*;
 import javafx.scene.paint.Color;
@@ -38,12 +39,13 @@ public class Chart extends Application {
 		// Add the Canvas to the Pane
 
 		gc.setFill(c);
-		gc.setStroke(Color.BLUE);
+		//gc.setStroke(Color.BLUE);
+		gc.setFont(new Font("Times New Roman", 14));
 		gc.strokeRect(10,10,780,470);     //Rectangle Box
 		gc.strokeLine(10,115,790,115);    //Line Stroke
 		gc.strokeLine(10,370,790,370);
-		//gc.strokeText("Sat",20,60);
-		gc.strokeText("ಶನಿ",20,60);
+		gc.strokeText("Asc\nSat",20,60);
+		//gc.strokeText("ಶನಿ",20,60);
 		gc.strokeLine(10,235,150,235);    //Horizontal Left lines
 		gc.strokeLine(650,235,790,235);   //Horizontal Right lines
 		gc.strokeLine(385,10,385,115);    //Vertical Top Line
@@ -53,11 +55,6 @@ public class Chart extends Application {
 		final Label title = new Label("Some text");
 		title.setMaxWidth(Double.MAX_VALUE);
 		title.setAlignment(Pos.CENTER);
-
-
-
-
-
 		root.getChildren().add(canvas);
 		// Create the Scene
 		Scene scene = new Scene(root);
