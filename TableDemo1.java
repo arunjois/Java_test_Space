@@ -1,28 +1,26 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class TabPaneDemo extends Application {
+public class TableDemo1 extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        TabPane tabPane = new TabPane();
 
-        Tab tab1 = new Tab("Button");
-        tab1.setContent(new StackPane(new Button("Button")));
+        TableView table = new TableView();
 
-        Tab tab2 = new Tab("CheckBox");
-        tab2.setContent(new StackPane(new CheckBox("CheckBox")));
+        TableColumn firstNameCol = new TableColumn("First Name");
+        TableColumn lastNameCol = new TableColumn("Last Name");
+        TableColumn jobColumn = new TableColumn("Job");
 
-        tabPane.getTabs().addAll(tab1, tab2);
+        table.getColumns().addAll(firstNameCol, lastNameCol, jobColumn);
+
 
         StackPane myPane = new StackPane();
-        myPane.getChildren().add(tabPane);
+        myPane.getChildren().add(table);
         Scene myScene = new Scene(myPane);
 
         primaryStage.setScene(myScene);
