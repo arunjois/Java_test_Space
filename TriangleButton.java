@@ -1,4 +1,4 @@
-import com.sun.javafx.css.converters.PaintConverter;
+import javafx.css.converter.PaintConverter;
 import javafx.beans.property.*;
 import javafx.css.CssMetaData;
 import javafx.css.PseudoClass;
