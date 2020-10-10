@@ -32,10 +32,8 @@ public class TabPane_2 extends Application {
 					+ (int)(counter + 1));
 					counter++;
 					tab.setContent(label);
-					tabpane.getTabs().add(
-					tabpane.getTabs().size() - 1, tab);
-					tabpane.getSelectionModel().select(
-					tabpane.getTabs().size() - 2);
+					tabpane.getTabs().add(tabpane.getTabs().size() - 1, tab);
+					tabpane.getSelectionModel().select(tabpane.getTabs().size() - 2);
 				}
 			}
 		};
