@@ -143,3 +143,7 @@ public class InfoInput {
 
     }
 }
+ String HOME = System.getProperty("user.home");
+ String DIR  = HOME + File.separator + ".shankari";
+ String EPHE_DIR = DIR + File.separator + "ephe" + File.separator;
+ String GEONAMES = DIR + File.separator + "geonames1000.db" ;

@@ -30,7 +30,6 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
-//package filechoosersample;
  
 import java.awt.Desktop;
 import java.io.File;

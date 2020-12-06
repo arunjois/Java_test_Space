@@ -68,7 +68,6 @@ public class ComboBoxListenerExample extends Application {
     // Just a helper method specific for this example; it simply returns a random word. 
     // This is used to simulate loading new data from the database
     private String getRandomWord() {
-
         List<String> words = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Red", "Blue", "Green", "Yellow", "Left", "Right", "Top", "Bottom");
         Random random = new Random();
         return words.get(random.nextInt(words.size()));
